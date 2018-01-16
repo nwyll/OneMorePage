@@ -14,7 +14,7 @@ const Landing = () => (
       <h2>Check out our current book clubs</h2>
       <img src="\assets\cover_art\these_broken_stars.jpg" alt="These Broken Stars" width="300" height="453" />
       <img src="\assets\cover_art\six_of_crows.jpg" alt="Six of Crows" width="300" height="453" />
-      <img src="\assets\cover_art\illuminae_files.jpg" alt="Illuminae" width="300" height="453" />
+      <img src="\assets\cover_art\vice&virtue.jpg" alt="The Gentleman's Guide To Vice and Virtue" width="300" height="453" />
     </section>
     <section className="selling-points">
       <div className="selling-point">
