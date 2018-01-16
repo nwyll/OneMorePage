@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './BookShelf.css';
 
 class BookShelf extends Component { 
   constructor(props) {
@@ -25,11 +26,11 @@ class BookShelf extends Component {
           {this.state.bookclubs.map((book) => {
             return (
               <div className="tile" key={book.id}>
-                <h3>{book.title}</h3>
-                <h5><em>By {book.author}</em></h5>
-                <p>{book.description}</p>
+                <h2>{book.title}</h2>
+                <h4><em>By {book.author}</em></h4>
                 <p>Start Date: {book.start}</p>
                 <p>End Date: {book.end}</p>
+                <button>Join</button>
               </div>
             )
           })}
