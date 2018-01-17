@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './BookShelf.css';
+import axios from 'axios';
 
 class BookShelf extends Component {
   constructor(props) {
@@ -10,12 +11,17 @@ class BookShelf extends Component {
   }
 
   componentDidMount() {
-   fetch('http://localhost:8080/book_clubs')
-   .then(data => {
-     return data.json();
-   }).then(data => {
-     this.setState({ bookclubs: data});
-   })
+    axios.get('http://localhost:8080/book_clubs')
+    .then(response => {
+      console.log(response);
+      this.setState({ bookclubs: response.data })
+    }).catch(error => console.log(error))
+   // fetch('http://localhost:8080/book_clubs')
+   // .then(data => {
+   //   return data.json();
+   // }).then(data => {
+   //   this.setState({ bookclubs: data});
+   // })
   }
 
   render () {
